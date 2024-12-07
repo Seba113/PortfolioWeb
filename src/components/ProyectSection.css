@@ -1,7 +1,6 @@
 .proyectSection {
     background-color: rgba(0, 0, 0, 0.781);
     min-height: 50vh;
-    box-shadow: 0 0 13px 2px;
     padding: 20px; /* Agrega algo de espacio alrededor */
 }
 

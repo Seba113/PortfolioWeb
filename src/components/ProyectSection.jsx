@@ -3,6 +3,7 @@ import ProyectCard from './ProyectCard';
 import rick from '../assets/Img/rick.png'
 import newage from '../assets/Img/newage.png'
 import app from '../assets/Img/ionicapp.png'
+import movieSeacrher from "../assets/Img/movieSeacrher.png"
 import './ProyectSection.css';
 
 const ProyectSection = () => {
@@ -17,20 +18,27 @@ const ProyectSection = () => {
 
         },
         {
+            title: 'Movie Searcher',
+            description: 'Buscador de peliculas en tiempo real. Uso de Hooks: useState, useEffect, useMemo & customHooks. Fetching de datos, callbacks, debounce y una web resposive, hacen de este proyecto uno simple, pero efectivo.',
+            link: 'https://seba113.github.io/Movie-Searcher-w-React/',
+            imageSrc: movieSeacrher,
+            tech: 'REACT, JAVASCRIPT, CSS, REST API'
+        },
+        {
+            title: 'Rick & Morty wiki',
+            description: 'Este fue mi primer proyecto con React consumiendo la API de Rick y Morty para crear una wiki de personajes y mostrar su información.',
+            link: 'https://seba113.github.io/1er-proyecto-api-con-React/',
+            imageSrc: rick,
+            tech: 'REACT, JSX(JavaScript Syntax eXtension),VITE, CSS, BOOTSTRAP'
+        },
+        {
             title: 'App Mobile para Android con IONIC + JS',
             description: 'App pensada para recientes padres, que ofrece un servicio de creacion de eventos del dia a dia relacionados a su bebé y asi poder trackear mejor los eventos, comidas, horas de sueño entre otras cosas. App desarrollada con IONIC + JavaScript, consumiendo APIs y usando LocalStorage.',
             link: 'https://github.com/Seba113/AppMovilAndroid-CreadorDeEventos',
             imageSrc: app,
             tech: 'HTML, IONIC, JAVASCRIPT, ANDROID STUDIO, CSS'
 
-        },
-        {
-            title: 'Consumiendo Api con React',
-            description: 'Este fue mi primer proyecto con React consumiendo la API de Rick y Morty para crear una wiki de personajes y mostrar su información.',
-            link: 'https://seba113.github.io/1er-proyecto-api-con-React/',
-            imageSrc: rick,
-            tech: 'REACT, JSX(JavaScript Syntax eXtension),VITE, CSS, BOOTSTRAP'
-        },
+        }  
     ]
 
     return (

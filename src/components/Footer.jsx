@@ -10,11 +10,11 @@ const Footer = () => {
     <div className='container'>
         <div className='row'>
             <div className='col-md-6 col-12'>
-                <h3>¡Let's get in touch!</h3>
+                <h3 className='text-center'>¡Let's get in touch!</h3>
                 <p className='pt-4'><strong>Email:</strong> fernandezsolarisebastian@gmail.com</p>
             </div>
             <div className='col-md-6 col-12 redes'>
-                <h4 className='text-center'>Redes Sociales</h4>
+                <h3 className='text-center'>Redes Sociales</h3>
                 <div className='d-flex justify-content-center pt-3'>
                     <a target='_blank' rel="noopener noreferrer" href="https://www.linkedin.com/in/sebastianfernandezti/">
                         <img src={linkedin} alt="LinkedIn" />
