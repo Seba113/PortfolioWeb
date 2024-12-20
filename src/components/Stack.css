@@ -9,6 +9,7 @@
     display: flex;
     width: max-content;
     animation: scroll 40s linear infinite;
+    height: 5rem;
   }
   
   .logos-group {
@@ -33,16 +34,6 @@
       /* Usamos el ancho de un solo grupo para la animación */
       transform: translateX(calc(-25%));
     }
-  }
-  
-  /* Al hacer hover en el track */
-  .logos-track:hover {
-    animation-play-state: paused;
-  }
-  
-  /* Efecto hover para los logos */
-  .tech-logo:hover {
-    box-shadow: 0 0 15px rgba(8, 155, 160, 0.952);
   }
   
   /* Aseguramos que no haya saltos añadiendo una transición suave */
