@@ -1,0 +1,53 @@
+.logos-scroll-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 5rem;
+  }
+  
+  .logos-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+  }
+  
+  .logos-group {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  
+  .tech-logo {
+    height: 4rem;
+    padding: 5px;
+    margin-right: 25px;
+    transition: box-shadow 0.3s ease;
+    flex-shrink: 0;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      /* Usamos el ancho de un solo grupo para la animación */
+      transform: translateX(calc(-25%));
+    }
+  }
+  
+  /* Al hacer hover en el track */
+  .logos-track:hover {
+    animation-play-state: paused;
+  }
+  
+  /* Efecto hover para los logos */
+  .tech-logo:hover {
+    box-shadow: 0 0 15px rgba(8, 155, 160, 0.952);
+  }
+  
+  /* Aseguramos que no haya saltos añadiendo una transición suave */
+  @media (prefers-reduced-motion: no-preference) {
+    .logos-track {
+      transition: transform 0.5s ease;
+    }
+  }

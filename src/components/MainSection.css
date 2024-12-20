@@ -38,24 +38,6 @@ p {
     box-shadow: 0 0 30px rgba(8, 155, 160, 0.952);
 }
 
-.stack {
-    display: flex;
-    gap: 10px;
-    margin-top: 3rem;
-    flex-wrap: wrap; /* Permitir que los íconos se envuelvan */
-    justify-content: center;
-    margin-bottom: 2rem;
-}
-
-.stack img {
-    height: 4rem; /* Tamaño de íconos */
-    padding: 5px;
-    transition: box-shadow 0.3s; /* Transición suave en el hover */
-}
-
-.stack img:hover {
-    box-shadow: 0 0 30px rgba(8, 155, 160, 0.952);
-}
 
 /* Media Queries para responsividad */
 @media (max-width: 768px) {
