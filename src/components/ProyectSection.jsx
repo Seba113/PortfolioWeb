@@ -19,7 +19,7 @@ const ProyectSection = () => {
         },
         {
             title: 'Movie Searcher',
-            description: 'Buscador de peliculas en tiempo real. Uso de Hooks: useState, useEffect, useMemo & customHooks. Fetching de datos, callbacks, debounce y una web resposive, hacen de este proyecto uno simple, pero efectivo.',
+            description: 'Buscador de peliculas en tiempo real. Uso de Hooks: useState, useEffect, useMemo & customHooks. Fetching de datos, callbacks, debounce y una web responsive, hacen de esta prueba técnica una simple, pero efectiva.',
             link: 'https://seba113.github.io/Movie-Searcher-w-React/',
             imageSrc: movieSeacrher,
             tech: 'REACT, JAVASCRIPT, CSS, REST API'

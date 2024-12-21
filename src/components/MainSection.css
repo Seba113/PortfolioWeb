@@ -20,9 +20,9 @@ p {
 }
 
 .container {
-    display: flex; /* Asegurarse de que el contenedor use flexbox */
-    flex-direction: column; /* Apilar elementos verticalmente */
-    align-items: center; /* Centrar horizontalmente */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
     width: 100%;
     height: 100%;
 }
