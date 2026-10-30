@@ -1,57 +1,85 @@
-img {
-    max-height: 3rem;
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    backdrop-filter: blur(10px);
+    background: rgba(8, 19, 29, 0.8);
+    border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.9rem;
+    color: var(--text);
+}
+
+.brand img {
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.18);
 }
 
-.header {
-    background-color: rgba(0, 0, 0, 0.979);
-    max-height: 6rem;
-}
-
-.header a {
-    color: #ffffffb4;
-}
-
-.name-content {
+.brand-copy {
+    display: flex;
     flex-direction: column;
+    line-height: 1.2;
 }
 
-.name-content {
-    text-align: left; /* Alinear texto a la izquierda */
+.brand-name {
+    font-size: 1rem;
+    font-weight: 700;
 }
 
-.navbar-nav {
-    flex-direction: column; /* Apilar elementos en móviles */
+.brand-role {
+    color: var(--muted);
+    font-size: 0.72rem;
 }
 
-.nav-link {
-    color: #ffffffb4; /* Color del texto del menú */
-    text-decoration: none; /* Sin subrayado */
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
 }
 
-/* Media Queries para el menú hamburguesa */
-@media (min-width: 576px) {
-    .navbar-nav {
-        flex-direction: row; /* Alinear horizontalmente en pantallas grandes */
+.main-nav a {
+    color: var(--muted);
+    font-size: 0.92rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: var(--text);
+}
+
+@media (max-width: 720px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.9rem 1rem;
     }
-    .navbar-toggler {
-        display: none; /* Ocultar botón de menú en pantallas grandes */
-    }
-}
 
-/* Ajustes para mejorar la experiencia móvil */
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column; /* Apilar elementos en móviles */
-        max-height: auto; /* Permitir que la altura sea flexible */
-    }
-    
-    .name-content {
-        text-align: center; /* Centrar texto en móviles */
+    .main-nav {
+        width: 100%;
+        justify-content: space-between;
+        gap: 0.5rem;
+        flex-wrap: wrap;
     }
 
-    .header a {
-        padding: 0.5rem 1rem; /* Espaciado en los enlaces */
-        display: block; /* Mostrar como bloque para mejor clicabilidad */
+    .main-nav a {
+        font-size: 0.8rem;
     }
 }

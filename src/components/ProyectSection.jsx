@@ -1,55 +1,52 @@
 import React from 'react';
 import ProyectCard from './ProyectCard';
-import rick from '../assets/Img/rick.png'
-import newage from '../assets/Img/newage.png'
-import app from '../assets/Img/ionicapp.png'
-import movieSeacrher from "../assets/Img/movieSeacrher.png"
+import rick from '../assets/Img/rick.png';
+import newage from '../assets/Img/newage.png';
+import app from '../assets/Img/ionicapp.png';
+import movieSeacrher from '../assets/Img/movieSeacrher.png';
 import './ProyectSection.css';
 
 const ProyectSection = () => {
-
     const projects = [
         {
-            title: 'Web App responsive para empresa de Landscaping',
-            description: 'Web app para cliente con empresa dedicada al Landscaping detallando sus servicios, contacto, y descripcion de la empresa.',
+            title: 'Landing page para empresa de landscaping',
+            description: 'Diseño responsive y moderno para una empresa de servicios de jardín, con enfoque en claridad, servicios y contacto comercial.',
             link: 'https://newagelandscaping.azurewebsites.net/',
             imageSrc: newage,
-            tech: 'HTML, CSS, BOOTSTRAP, JAVASCRIPT, AZZURE'
-
+            tech: 'HTML • CSS • Bootstrap • JS • Azure'
         },
         {
             title: 'Movie Searcher',
-            description: 'Buscador de peliculas en tiempo real. Uso de Hooks: useState, useEffect, useMemo & customHooks. Fetching de datos, callbacks, debounce y una web responsive, hacen de esta prueba técnica una simple, pero efectiva.',
+            description: 'Buscador de películas con filtros, consumo de API, manejo de estado complejo y experiencia responsive para pruebas técnicas.',
             link: 'https://seba113.github.io/Movie-Searcher-w-React/',
             imageSrc: movieSeacrher,
-            tech: 'REACT, JAVASCRIPT, CSS, REST API'
+            tech: 'React • JavaScript • CSS • API REST'
         },
         {
-            title: 'Rick & Morty wiki',
-            description: 'Este fue mi primer proyecto con React consumiendo la API de Rick y Morty para crear una wiki de personajes y mostrar su información.',
+            title: 'Rick & Morty Wiki',
+            description: 'Mi primer proyecto con React consumiendo la API de Rick and Morty para mostrar personajes y detalles de cada uno.',
             link: 'https://seba113.github.io/1er-proyecto-api-con-React/',
             imageSrc: rick,
-            tech: 'REACT, JSX(JavaScript Syntax eXtension),VITE, CSS, BOOTSTRAP'
+            tech: 'React • Vite • CSS • Bootstrap'
         },
         {
-            title: 'App Mobile para Android con IONIC + JS',
-            description: 'App pensada para recientes padres, que ofrece un servicio de creacion de eventos del dia a dia relacionados a su bebé y asi poder trackear mejor los eventos, comidas, horas de sueño entre otras cosas. App desarrollada con IONIC + JavaScript, consumiendo APIs y usando LocalStorage.',
+            title: 'App móvil para seguimiento de bebés',
+            description: 'Aplicación móvil pensada para padres con control de eventos diarios relacionados con sueño, comidas y rutinas del bebé.',
             link: 'https://github.com/Seba113/AppMovilAndroid-CreadorDeEventos',
             imageSrc: app,
-            tech: 'HTML, IONIC, JAVASCRIPT, ANDROID STUDIO, CSS'
-
-        }  
-    ]
+            tech: 'Ionic • JavaScript • Android Studio • CSS'
+        }
+    ];
 
     return (
-        <section id='proyectos' className='proyectSection'>
-            <div className='container'>
-                <div className='text-center'>
-                    <small><p className='span mb-1'>Proyectos</p></small>
-                    <h3 className='mb-4'>Mis proyectos destacados</h3>
+        <section id="proyectos" className="proyectSection">
+            <div className="projects-container">
+                <div className="section-header">
+                    <p className="section-label">Proyectos</p>
+                    <h3>Mis proyectos destacados</h3>
                 </div>
-                <div className= 'row'>
 
+                <div className="projects-grid">
                     {projects.map((project, index) => (
                         <ProyectCard
                             key={index}
@@ -63,7 +60,7 @@ const ProyectSection = () => {
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
 export default ProyectSection;

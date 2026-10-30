@@ -2,24 +2,41 @@ import React from 'react';
 import './about.css';
 
 const About = () => {
+    const skills = ['React', 'Vite', 'JavaScript', 'CSS', 'Bootstrap', 'Node.js', 'Express', 'C#', '.NET'];
+
     return (
-        <section id='about' className='about'>
-            <div className='container text-center'>
-                <p className='span m-0'>Sobre mi</p>
-                <div className='aboutme'>
-                    <h3 className='mb-4'>Sebastián Fernández</h3>
-                    
-                        <p>¡Hola! Soy estudiante de desarrollo de software de la Universisad ORT en Montevideo, Uruguay.
-                        Mas especificamente de la carrera Analista en Tecnologias de la Información.
-                        </p>
-                        <p>Actualmente desarrollando con React + Vite, JavaScript, y CSS + Bootstrap. </p><p>Puliendo y adquiriendo conocimientos de backend con Node.js + Express.js, para convertirme en desarrollador Full-Stack.</p>
-                        <p>Considero mi mayor fortaleza el tener una sólida base en desarrollo y programación, ya que me facilita mucho al aprender algún lenguaje nuevo o a desenvolverme en nuevos entornos o tecnologías.</p>
-                        <p>Tambien tengo conocimentos desarrollando con C# y .NET programando con orientacion a objetos y MVC.</p>
-                        <strong><p>¡Estoy abierto a nuevos desafíos! No dudes en contactarme.</p></strong>
+        <section id="about" className="about">
+            <div className="about-container">
+                <p className="section-label">Sobre mí</p>
+                <h3>Sebastián Fernández</h3>
+
+                <div className="about-content">
+                    <p>
+                        Soy estudiante de desarrollo de software en la Universidad ORT de Montevideo, cursando
+                        Analista en Tecnologías de la Información. Me apasiona construir productos web útiles,
+                        visualmente claros y con buen rendimiento.
+                    </p>
+                    <p>
+                        Actualmente trabajo con React, Vite, JavaScript y CSS, y estoy profundizando en backend con
+                        Node.js y Express para convertirme en desarrollador Full Stack.
+                    </p>
+                    <p>
+                        También tengo experiencia con C# y .NET, enfocándome en programación orientada a objetos y
+                        arquitectura MVC. Me gusta aprender rápido, resolver problemas con lógica y mejorar la
+                        experiencia del usuario en cada proyecto.
+                    </p>
                 </div>
+
+                <div className="skills-list" aria-label="Tecnologías">
+                    {skills.map((skill) => (
+                        <span key={skill} className="skill-pill">{skill}</span>
+                    ))}
+                </div>
+
+                <strong className="contact-line">¡Estoy abierto a nuevos desafíos y oportunidades!</strong>
             </div>
         </section>
-    )
-}
+    );
+};
 
 export default About;

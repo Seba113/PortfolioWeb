@@ -1,69 +1,147 @@
 .mainSection {
-    margin-top: 5rem;
-    color: #fff;
-    min-height: 50vh;
-    padding-top: 80px;
-    margin-bottom: 4rem;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1.25rem 2rem;
 }
 
-h1 {
-    color: rgba(8, 155, 160, 0.952);
-    font-size: 3rem;
-    text-shadow: 0 0 10px rgba(8, 155, 160, 0.952);
+.hero-shell {
+    width: min(1100px, 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
 }
 
-h2 {
-    font-size: 4.3rem;
-    text-shadow: 0 0 1px rgba(255, 255, 255, 0.952);
+.hero-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.9rem;
 }
 
-p {
-    color: #ffffffb4;
-    text-shadow: 0 0 1px rgba(255, 255, 255, 0.952);
-    font-size: 15px;
+.eyebrow {
+    display: inline-block;
+    padding: 0.45rem 0.85rem;
+    border-radius: 999px;
+    border: 1px solid rgba(76, 201, 240, 0.4);
+    background: rgba(76, 201, 240, 0.08);
+    color: var(--primary);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.74rem;
+    font-weight: 700;
 }
 
-.container {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    width: 100%;
-    height: 100%;
+.hero-copy h1 {
+    color: var(--text);
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+    font-weight: 800;
 }
 
-.redes a {
-    margin: 10px;
-    color: #fff;
-    box-shadow: 0 0 15px rgba(8, 155, 160, 0.952);
-    text-decoration: none; /* Sin subrayado */
+.subtitle {
+    max-width: 700px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--muted);
 }
 
-.redes a:hover {
-    box-shadow: 0 0 30px rgba(8, 155, 160, 0.952);
+.meta {
+    font-size: 0.96rem;
+    color: var(--muted);
 }
 
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
 
-/* Media Queries para responsividad */
-@media (max-width: 768px) {
-    .mainSection{
-        margin-bottom: 2.5rem;
+.primary-btn,
+.secondary-btn,
+.social-links a {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 700;
+}
+
+.primary-btn {
+    background: linear-gradient(135deg, var(--primary), var(--primary-strong));
+    color: #06212d;
+    box-shadow: 0 12px 25px rgba(42, 183, 217, 0.35);
+}
+
+.secondary-btn {
+    color: var(--text);
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.primary-btn:hover,
+.secondary-btn:hover,
+.social-links a:hover {
+    transform: translateY(-2px);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.social-links a {
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.55rem 0.95rem;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.stack {
+    margin-top: 0.75rem;
+}
+
+.stack img {
+    height: 3.5rem;
+    opacity: 0.9;
+}
+
+@media (max-width: 720px) {
+    .mainSection {
+        padding-top: 3rem;
     }
-    h1 {
-        font-size: 2.5rem; /* Tamaño de fuente más pequeño */
+
+    .hero-actions {
+        width: 100%;
     }
 
-    h2 {
-        font-size: 2rem; /* Tamaño de fuente más pequeño */
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
     }
 
-    .stack {
-        margin-top: 5rem
-    }
-    .stack img {
-        height: 3rem; /* Reducir tamaño de los íconos */
+    .social-links {
+        width: 100%;
     }
 
-    .container {
-        padding: 0 20px; /* Espacio lateral para pantallas pequeñas */
+    .social-links a {
+        flex: 1 1 130px;
+        text-align: center;
     }
 }

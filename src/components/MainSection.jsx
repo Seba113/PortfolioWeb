@@ -1,29 +1,36 @@
 import React from 'react';
-import cv from '../assets/cv.pdf'
+import cv from '../assets/cv.pdf';
 import './MainSection.css';
-import {InfiniteScroll} from './Stack';
+import { InfiniteScroll } from './Stack';
 
 const MainSection = () => {
     return (
-        <section className='mainSection'>
-            <div className='container d-flex justify-content-center'>
-                <div className='text-center'>
-                    <h1>Software Developer</h1>
-                    <h2>Sebastián Fernández</h2>
-                    <p className='mt-4'>Full Stack Student</p>
-                    <p>ORT University → Montevideo, Uy </p>
+        <section id="home" className="mainSection">
+            <div className="hero-shell">
+                <div className="hero-copy">
+                    <span className="eyebrow">Desarrollador Full Stack</span>
+                    <h1>Sebastián Fernández</h1>
+                    <p className="subtitle">
+                        Creo aplicaciones web funcionales, limpias y centradas en la experiencia del usuario.
+                    </p>
+                    <p className="meta">ORT University • Montevideo, Uruguay</p>
+
+                    <div className="hero-actions">
+                        <a href="#proyectos" className="primary-btn">Ver proyectos</a>
+                        <a href={cv} download className="secondary-btn">Descargar CV</a>
+                    </div>
+
+                    <div className="social-links">
+                        <a href="https://www.linkedin.com/in/sebastianfernandezti/" target="_blank" rel="noreferrer">LinkedIn</a>
+                        <a href="https://github.com/Seba113" target="_blank" rel="noreferrer">GitHub</a>
+                        <a href="mailto:fernandezsolarisebastian@gmail.com">Email</a>
+                    </div>
                 </div>
-                <div className='redes mt-3'>
-                    <nav className='mt-4'>
-                        <a href="https://www.linkedin.com/in/sebastianfernandezti/" className='p-3' target='_blank'>LinkedIn</a>
-                        <a href="./src/assets/cv.pdf" download={cv} className='p-3'>Download cv</a>
-                        <a href="https://github.com/Seba113" className='p-3'target='_blank'>GitHub</a>
-                    </nav>
-                </div>
+
                 <InfiniteScroll />
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default MainSection
+export default MainSection;

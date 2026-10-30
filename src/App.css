@@ -1,18 +1,53 @@
-*{
+:root {
+  --bg: #07131d;
+  --bg-soft: #0d1c2b;
+  --panel: #112535;
+  --panel-strong: #17324a;
+  --text: #edf6ff;
+  --muted: #b7cad7;
+  --primary: #4cc9f0;
+  --primary-strong: #2ab7d9;
+  --accent: #7ef0c0;
+  --border: rgba(255, 255, 255, 0.12);
+  --shadow: 0 18px 45px rgba(7, 19, 29, 0.45);
+}
+
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-
-}
-body{
-  background-color: rgba(0, 0, 0, 0.952);
 }
 
-a{
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at top, rgba(76, 201, 240, 0.12), transparent 35%),
+    linear-gradient(180deg, var(--bg) 0%, #050d16 100%);
+  color: var(--text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
   text-decoration: none;
-  border-radius: 10%;
 }
 
-nav a:hover{
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.952);
+img {
+  max-width: 100%;
+  display: block;
 }
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(76, 201, 240, 0.3);
+}
+
+

@@ -1,61 +1,69 @@
 .footer {
-    background-color: rgba(0, 0, 0, 0.781); /* Fondo oscuro */
-    padding-top: 50px; /* Espaciado superior */
-    padding-bottom: 50px; /* Espaciado inferior */
-    box-shadow: 0 0 13px 2px; /* Sombra */
+    padding: 4rem 1.25rem 3rem;
+    border-top: 1px solid var(--border);
+    background: rgba(8, 19, 29, 0.8);
 }
 
-.footer h3, 
-.footer h4 {
-    color: #fff; /* Color del texto */
+.footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
 }
 
-.footer .container {
-    width: 100%; /* Asegura que ocupe el 100% en pantallas pequeñas */
-    max-width: 1200px; /* Ancho máximo para pantallas grandes */
-    margin: auto; /* Centra el contenedor */
+.footer-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
 }
 
-.footer p {
-    font-size: 17px; /* Tamaño de fuente del párrafo */
+.footer-copy h3 {
+    color: var(--text);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
 }
 
-/* Estilo para los enlaces de redes sociales */
-.footer .redes img {
-    width: 40px; /* Tamaño de los iconos */
-    margin: 0 10px; /* Espacio entre iconos */
-    transition: transform 0.3s; /* Transición suave para hover */
+.email-link {
+    color: var(--primary);
+    font-weight: 600;
 }
 
-.footer a{
-    box-shadow: none;
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
-.footer .redes a:hover {
-    transform: scale(1.1); /* Escala el icono al pasar el ratón */
-    box-shadow: none;
+.socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.02);
+    transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-.footer a:hover {
-    box-shadow: 0 0 15px rgba(8, 155, 160, 0.952); /* Sombra en hover */
+.socials a:hover {
+    transform: translateY(-2px);
+    border-color: rgba(76, 201, 240, 0.35);
 }
 
-/* Media Queries para ajuste responsivo */
-@media (max-width: 768px) {
-    .footer {
-        text-align: center; /* Centrar el texto en pantallas pequeñas */
+.socials img {
+    width: 24px;
+    height: 24px;
+}
+
+@media (max-width: 720px) {
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .footer h3, 
-    .footer h4 {
-        font-size: 1.5rem; /* Tamaño de fuente en móviles */
-    }
-
-    .footer p {
-        font-size: 15px; /* Tamaño de texto en móviles */
-    }
-
-    .footer .redes img {
-        width: 30px; /* Tamaño de iconos más pequeño en móviles */
+    .socials {
+        justify-content: center;
     }
 }

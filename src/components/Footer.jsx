@@ -6,31 +6,30 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-        <footer id='contacto' className='footer'>
-    <div className='container'>
-        <div className='row'>
-            <div className='col-md-6 col-12'>
-                <h3 className='text-center'>¡Let's get in touch!</h3>
-                <p className='pt-4'><strong>Email:</strong> fernandezsolarisebastian@gmail.com</p>
-            </div>
-            <div className='col-md-6 col-12 redes'>
-                <h3 className='text-center'>Redes Sociales</h3>
-                <div className='d-flex justify-content-center pt-3'>
-                    <a target='_blank' rel="noopener noreferrer" href="https://www.linkedin.com/in/sebastianfernandezti/">
+        <footer id="contacto" className="footer">
+            <div className="footer-inner">
+                <div className="footer-copy">
+                    <p className="section-label">Contacto</p>
+                    <h3>¡Hablemos!</h3>
+                    <a href="mailto:fernandezsolarisebastian@gmail.com" className="email-link">
+                        fernandezsolarisebastian@gmail.com
+                    </a>
+                </div>
+
+                <div className="socials">
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/sebastianfernandezti/">
                         <img src={linkedin} alt="LinkedIn" />
                     </a>
-                    <a target='_blank' rel="noopener noreferrer" href="https://github.com/Seba113/">
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/Seba113/">
                         <img src={git} alt="GitHub" />
                     </a>
-                    <a target='_blank' rel="noopener noreferrer" href="https://www.instagram.com/sebafs98/">
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/sebastian.fernandez113/">
                         <img src={ig} alt="Instagram" />
                     </a>
                 </div>
             </div>
-        </div>
-    </div>
-</footer>
-    )
-}
+        </footer>
+    );
+};
 
 export default Footer;
