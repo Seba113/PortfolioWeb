@@ -1,23 +1,39 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import cv from '../assets/cv.pdf';
 import './MainSection.css';
 import { InfiniteScroll } from './Stack';
 
-const MainSection = () => {
+const MainSection = ({ language }) => {
+    const content = language === 'en'
+        ? {
+            role: 'Full Stack Developer',
+            subtitle: 'I build functional, clean web applications focused on user experience.',
+            university: 'ORT University',
+            projects: 'View projects',
+            resume: 'Download resume',
+        }
+        : {
+            role: 'Desarrollador Full Stack',
+            subtitle: 'Creo aplicaciones web funcionales, limpias y centradas en la experiencia del usuario.',
+            university: 'Universidad ORT',
+            projects: 'Ver proyectos',
+            resume: 'Descargar CV',
+        };
+
     return (
         <section id="home" className="mainSection">
             <div className="hero-shell">
                 <div className="hero-copy">
-                    <span className="eyebrow">Desarrollador Full Stack</span>
+                    <span className="eyebrow">{content.role}</span>
                     <h1>Sebastián Fernández</h1>
                     <p className="subtitle">
-                        Creo aplicaciones web funcionales, limpias y centradas en la experiencia del usuario.
+                        {content.subtitle}
                     </p>
-                    <p className="meta">ORT University • Montevideo, Uruguay</p>
+                    <p className="meta">{content.university} • Montevideo, Uruguay</p>
 
                     <div className="hero-actions">
-                        <a href="#proyectos" className="primary-btn">Ver proyectos</a>
-                        <a href={cv} download className="secondary-btn">Descargar CV</a>
+                        <a href="#proyectos" className="primary-btn">{content.projects}</a>
+                        <a href={cv} download className="secondary-btn">{content.resume}</a>
                     </div>
 
                     <div className="social-links">
@@ -31,6 +47,10 @@ const MainSection = () => {
             </div>
         </section>
     );
+};
+
+MainSection.propTypes = {
+    language: PropTypes.oneOf(['en', 'es']).isRequired,
 };
 
 export default MainSection;

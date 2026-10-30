@@ -1,16 +1,20 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import ig from '../assets/Img/ig.png';
 import linkedin from '../assets/Img/linkedin.png';
 import git from '../assets/Img/github2.png';
 import './Footer.css';
 
-const Footer = () => {
+const Footer = ({ language }) => {
+    const content = language === 'en'
+        ? { section: 'Contact', heading: "Let's talk!" }
+        : { section: 'Contacto', heading: '¡Hablemos!' };
+
     return (
         <footer id="contacto" className="footer">
             <div className="footer-inner">
                 <div className="footer-copy">
-                    <p className="section-label">Contacto</p>
-                    <h3>¡Hablemos!</h3>
+                    <p className="section-label">{content.section}</p>
+                    <h3>{content.heading}</h3>
                     <a href="mailto:fernandezsolarisebastian@gmail.com" className="email-link">
                         fernandezsolarisebastian@gmail.com
                     </a>
@@ -30,6 +34,10 @@ const Footer = () => {
             </div>
         </footer>
     );
+};
+
+Footer.propTypes = {
+    language: PropTypes.oneOf(['en', 'es']).isRequired,
 };
 
 export default Footer;

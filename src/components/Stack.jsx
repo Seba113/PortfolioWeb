@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import html from '../assets/Img/html.png'
 import css from '../assets/Img/css.png'
 import bootstrap from '../assets/Img/bootrstrap.png'
@@ -65,5 +65,4 @@ export const InfiniteScroll = () => {
         </div>
       );
     };
-
 

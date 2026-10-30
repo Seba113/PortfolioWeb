@@ -27,7 +27,7 @@
     grid-template-columns: 1.2fr 1fr;
     gap: 1.5rem;
     align-items: center;
-    background: rgba(17, 37, 53, 0.9);
+    background: var(--card-bg);
     border: 1px solid var(--border);
     border-radius: 22px;
     box-shadow: var(--shadow);
@@ -102,4 +102,3 @@
         grid-template-columns: 1fr;
     }
 }
-
